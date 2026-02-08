@@ -80,6 +80,8 @@ or you can store the file anywhere you'd like and use that location.
 The font files are available in the [fonts folder](https://github.com/common-nighthawk/go-figure/tree/master/fonts)
 and on [figlet.org](http://www.figlet.org/fontdb.cgi).
 
+We are also using fonts from [figlet-fonts](https://github.com/xero/figlet-fonts).
+
 Here are two examples--
 
 `myFigure := figure.NewFigureWithFont("Foo Bar", "/home/ubuntu/go/src/github.com/common-nighthawk/go-figure/fonts/alphabet.flf", true)`
