@@ -268,7 +268,11 @@ returns
 
 
 ## Supported Fonts
-See [gallery.txt](gallery/gallery.txt)
+See the file [gallery.txt](gallery/gallery.txt) in the terminal by downloading it and using the following command:
+```bash
+cat gallery.txt
+```
+Apparently, there are [some challenges](https://bbs.archlinux.org/viewtopic.php?id=281587) in displaying ASCII art text on GitHub.
 
 ## Contributing
 Because this project is small, we can dispense with formality.
