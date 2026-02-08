@@ -268,7 +268,7 @@ returns
 
 
 ## Supported Fonts
-See [gallery.md](gallery/gallery.md)
+See [gallery.txt](gallery/gallery.txt)
 
 ## Contributing
 Because this project is small, we can dispense with formality.

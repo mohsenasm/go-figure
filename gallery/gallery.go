@@ -16,20 +16,20 @@ func main() {
 		log.Fatal(err)
 	}
 
-	output, err := os.Create("gallery.md")
+	output, err := os.Create("gallery.txt")
 	if err != nil {
 		fmt.Println("Error creating file:", err)
 		return
 	}
 	defer output.Close()
 
-	output.WriteString("# Font Gallary\n")
+	output.WriteString("# Font Gallary\n\n")
 	for _, file := range files {
 		fontName := strings.TrimSuffix(strings.TrimPrefix(file, "../fonts/"), ".flf")
 		output.WriteString("## " + fontName + "\n")
-		output.WriteString("<pre>\n")
+		output.WriteString("\n")
 		myFigure := figure.NewFigure("go-figure", fontName, true)
 		_, err = output.WriteString(myFigure.String())
-		output.WriteString("</pre>\n")
+		output.WriteString("\n")
 	}
 }
