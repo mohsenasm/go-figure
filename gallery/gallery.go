@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"figure"
+	"github.com/mohsenasm/go-figure"
 )
 
 func main() {
