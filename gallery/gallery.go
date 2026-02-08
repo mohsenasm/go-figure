@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 	"path/filepath"
 	"strings"
 
@@ -15,13 +16,20 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println("# Font Gallary")
+	output, err := os.Create("gallery.md")
+	if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
+	defer output.Close()
+
+	output.WriteString("# Font Gallary\n")
 	for _, file := range files {
 		fontName := strings.TrimSuffix(strings.TrimPrefix(file, "../fonts/"), ".flf")
-		fmt.Println("##", fontName)
-		fmt.Println("```")
+		output.WriteString("## " + fontName + "\n")
+		output.WriteString("```\n")
 		myFigure := figure.NewFigure("go-figure", fontName, true)
-		myFigure.Print()
-		fmt.Println("```")
+		_, err = output.WriteString(myFigure.String())
+		output.WriteString("```\n")
 	}
 }

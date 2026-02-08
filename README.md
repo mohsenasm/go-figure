@@ -268,7 +268,7 @@ returns
 
 
 ## Supported Fonts
-See [gallary.md](gallary/gallary.md)
+See [gallery.md](gallery/gallery.md)
 
 ## Contributing
 Because this project is small, we can dispense with formality.
