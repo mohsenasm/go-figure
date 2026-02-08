@@ -27,9 +27,9 @@ func main() {
 	for _, file := range files {
 		fontName := strings.TrimSuffix(strings.TrimPrefix(file, "../fonts/"), ".flf")
 		output.WriteString("## " + fontName + "\n")
-		output.WriteString("```\n")
+		output.WriteString("<pre>\n")
 		myFigure := figure.NewFigure("go-figure", fontName, true)
 		_, err = output.WriteString(myFigure.String())
-		output.WriteString("```\n")
+		output.WriteString("</pre>\n")
 	}
 }
